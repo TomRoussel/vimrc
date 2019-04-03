@@ -1,0 +1,72 @@
+" Options
+set tabstop=4
+set shell=zsh
+set incsearch
+set laststatus=2
+set nocompatible
+set smartcase
+syntax on
+
+let mapleader=','
+
+" Visual stuff
+
+colorscheme meta5
+hi Normal guibg=NONE ctermbg=NONE
+
+set fillchars=vert:│
+
+" set statusline=
+" set statusline +=%1*\ %n\ %*            "buffer number
+" set statusline +=%5*%{&ff}%*            "file format
+" set statusline +=%3*%y%*                "file type
+" set statusline +=%4*\ %<%F%*            "full path
+" set statusline +=%2*%m%*                "modified flag
+" set statusline +=%1*%=%5l%*             "current line
+" set statusline +=%2*/%L%*               "total lines
+" set statusline +=%1*%4v\ %*             "virtual column number
+" set statusline +=%2*0x%04B\ %*          "character under cursor
+" 
+" hi User1 ctermfg=32 ctermbg=none
+" hi User2 ctermfg=32 ctermbg=none
+" hi User3 ctermfg=32 ctermbg=none
+" hi User4 ctermfg=46 ctermbg=none
+" hi User5 ctermfg=46 ctermbg=none
+
+" hi User1 ctermfg=32 ctermbg=237
+" hi User2 ctermfg=32 ctermbg=237
+" hi User3 ctermfg=32 ctermbg=237
+" hi User4 ctermfg=46 ctermbg=237
+" hi User5 ctermfg=46 ctermbg=237
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
+
+
+" Custom Commands
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+	 	\ | wincmd p | diffthis
+command SaveSession mksession! ~/.vim_default_session
+
+" Plugin settings
+let g:NERDTreeWinPos = "right"
+
+" Remappings
+
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+
+nnoremap <leader>w :w<CR>
+nnoremap <leader>e :e ~/.vimrc<CR>
+
+nnoremap <C-f> :CtrlP<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
+nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
+
+" Simple autocommands
+autocmd BufWritePost .vimrc :source %
+autocmd BufWritePost ~/.vim/custom_rc :source %
+autocmd BufRead ~/.vim/custom_rc :set syntax=vim
