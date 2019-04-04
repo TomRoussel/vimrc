@@ -17,3 +17,7 @@ cd ~/.vim
 
 git submodule update --init
 
+mkdir swap
+mkdir undo
+mkdir backup
+

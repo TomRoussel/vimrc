@@ -5,6 +5,10 @@ set incsearch
 set laststatus=2
 set nocompatible
 set smartcase
+set dir=~/.vim/swap
+set backupdir=~/.vim/backup
+set undodir=~/.vim/undo
+set undofile " This makes sure you actually create undofile
 syntax on
 
 let mapleader=','
