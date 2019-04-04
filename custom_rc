@@ -60,7 +60,7 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
 nnoremap <leader>w :w<CR>
-nnoremap <leader>e :e ~/.vimrc<CR>
+nnoremap <leader>e :e ~/.vim/custom_rc<CR>
 
 nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
@@ -70,3 +70,9 @@ nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
 autocmd BufWritePost .vimrc :source %
 autocmd BufWritePost ~/.vim/custom_rc :source %
 autocmd BufRead ~/.vim/custom_rc :set syntax=vim
+
+augroup python 
+	autocmd!
+	autocmd Filetype python 
+		\	syn keyword pythonBuiltin self
+augroup end
