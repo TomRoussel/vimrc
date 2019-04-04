@@ -1,15 +1,25 @@
 " Options
+
+"" Indentation options
 set tabstop=4
+set softtabstop=4 
+set autoindent
+set shiftwidth=4
+set expandtab
+
+"" Misc. settings  
 set shell=zsh
 set incsearch
 set laststatus=2
 set nocompatible
 set smartcase
+set ignorecase " This needs to be set for smartcase to have any effect
+set backspace=indent,eol,start " Otherwise backspace acts weirdly
 set dir=~/.vim/swap
 set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 set undofile " This makes sure you actually create undofile
-syntax on
+syntax enable
 
 let mapleader=','
 
@@ -19,29 +29,6 @@ colorscheme meta5
 hi Normal guibg=NONE ctermbg=NONE
 
 set fillchars=vert:│
-
-" set statusline=
-" set statusline +=%1*\ %n\ %*            "buffer number
-" set statusline +=%5*%{&ff}%*            "file format
-" set statusline +=%3*%y%*                "file type
-" set statusline +=%4*\ %<%F%*            "full path
-" set statusline +=%2*%m%*                "modified flag
-" set statusline +=%1*%=%5l%*             "current line
-" set statusline +=%2*/%L%*               "total lines
-" set statusline +=%1*%4v\ %*             "virtual column number
-" set statusline +=%2*0x%04B\ %*          "character under cursor
-" 
-" hi User1 ctermfg=32 ctermbg=none
-" hi User2 ctermfg=32 ctermbg=none
-" hi User3 ctermfg=32 ctermbg=none
-" hi User4 ctermfg=46 ctermbg=none
-" hi User5 ctermfg=46 ctermbg=none
-
-" hi User1 ctermfg=32 ctermbg=237
-" hi User2 ctermfg=32 ctermbg=237
-" hi User3 ctermfg=32 ctermbg=237
-" hi User4 ctermfg=46 ctermbg=237
-" hi User5 ctermfg=46 ctermbg=237
 
 let g:lightline = {
       \ 'colorscheme': 'solarized',
@@ -70,13 +57,21 @@ nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
 
+vnoremap $1 <ESC>`<i(<ESC>`>la)<ESC>
+vnoremap $2 <ESC>`<i{<ESC>`>la}<ESC>
+vnoremap $3 <ESC>`<i[<ESC>`>la]<ESC>
+vnoremap $4 <ESC>`<i"<ESC>`>la"<ESC>
+
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+
 " Simple autocommands
-autocmd BufWritePost .vimrc :source %
-autocmd BufWritePost ~/.vim/custom_rc :source %
+autocmd BufWritePost .vimrc nested source %
+autocmd BufWritePost ~/.vim/custom_rc nested source %
 autocmd BufRead ~/.vim/custom_rc :set syntax=vim
 
 augroup python 
 	autocmd!
-	autocmd Filetype python 
-		\	syn keyword pythonBuiltin self
+	autocmd Filetype python syn keyword pythonBuiltin self
 augroup end
