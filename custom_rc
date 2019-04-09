@@ -10,6 +10,7 @@ set expandtab
 "" Misc. settings  
 set shell=zsh
 set incsearch
+set hlsearch
 set laststatus=2
 set nocompatible
 set smartcase
