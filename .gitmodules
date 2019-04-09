@@ -14,5 +14,5 @@
 	path = pack/my-plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "pack/my-plugins/opt/vim-fugitive"]
-	path = pack/my-plugins/opt/vim-fugitive
+	path = pack/my-plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
