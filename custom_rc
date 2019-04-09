@@ -19,6 +19,8 @@ set dir=~/.vim/swap
 set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 set undofile " This makes sure you actually create undofile
+
+set spelllang=en
 syntax enable
 
 let mapleader=','
@@ -56,6 +58,9 @@ nnoremap <leader>e :e ~/.vim/custom_rc<CR>
 nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
+
+" Replace the incorrect spelling with the first suggestion
+nnoremap <leader>z 1zs 
 
 vnoremap $1 <ESC>`<i(<ESC>`>la)<ESC>
 vnoremap $2 <ESC>`<i{<ESC>`>la}<ESC>
