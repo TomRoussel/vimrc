@@ -1,13 +1,13 @@
-" Options
+""" OPTIONS
 
-"" Indentation options
+""" INDENTATION OPTIONS
 set tabstop=4
 set softtabstop=4 
 set autoindent
 set shiftwidth=4
 set expandtab
 
-"" Misc. settings  
+""" MISC. SETTINGS  
 set shell=zsh
 set incsearch
 set hlsearch
@@ -26,7 +26,7 @@ syntax enable
 
 let mapleader=','
 
-" Visual stuff
+""" VISUAL STUFF
 
 colorscheme meta5
 hi Normal guibg=NONE ctermbg=NONE
@@ -38,15 +38,16 @@ let g:lightline = {
       \ }
 
 
-" Custom Commands
+""" CUSTOM COMMANDS
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 command SaveSession mksession! ~/.vim_default_session
 
-" Plugin settings
+
+""" PLUGIN SETTINGS
 let g:NERDTreeWinPos = "right"
 
-" Remappings
+""" REMAPPINGS
 
 nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
@@ -72,11 +73,12 @@ inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 
-" Simple autocommands
+""" SIMPLE AUTOCOMMANDS
 autocmd BufWritePost .vimrc nested source %
 autocmd BufWritePost ~/.vim/custom_rc nested source %
 autocmd BufRead ~/.vim/custom_rc :set syntax=vim
 
+""" AUTOGROUP FOR FILETYPES
 augroup python 
 	autocmd!
 	autocmd Filetype python syn keyword pythonBuiltin self
