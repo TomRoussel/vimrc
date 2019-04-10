@@ -43,6 +43,10 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 command SaveSession mksession! ~/.vim_default_session
 
+" Vim - fugitive commands
+command Gs Gstatus
+command Gc Gcommit
+
 
 """ PLUGIN SETTINGS
 let g:NERDTreeWinPos = "right"
