@@ -47,6 +47,10 @@ command SaveSession mksession! ~/.vim_default_session
 command Gs Gstatus
 command Gc Gcommit
 
+" Ack dependant commands
+command Todo Ack TODO
+command TODO Ack TODO
+
 
 """ PLUGIN SETTINGS
 let g:NERDTreeWinPos = "right"
@@ -88,3 +92,7 @@ augroup python
 	autocmd Filetype python syn keyword pythonBuiltin self
     autocmd Filetype python nnoremap th oimport pdb; pdb.set_trace()<ESC>
 augroup end
+
+""" ABBREVIATIONS
+abbr teh the
+abbr wrt w.r.t.
