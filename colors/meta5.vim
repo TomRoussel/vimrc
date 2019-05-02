@@ -101,3 +101,6 @@ hi link rubyFunction PreProc
 hi link rubyDefine Define
 hi link rubyModule Keyword
 hi link rubyClass Keyword
+
+" Python
+hi link PythonArg Statement
