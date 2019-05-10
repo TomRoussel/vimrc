@@ -55,6 +55,9 @@ command TODO Ack TODO
 """ PLUGIN SETTINGS
 let g:NERDTreeWinPos = "right"
 
+" ctrlp plugin won't search for a top directory (with .git), it will just search the cwd
+let g:ctrlp_working_path_mode = 'a'
+
 """ REMAPPINGS
 
 nnoremap <C-h> <C-W>h
