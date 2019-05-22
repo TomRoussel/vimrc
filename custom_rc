@@ -7,6 +7,7 @@ set autoindent
 set shiftwidth=4
 set expandtab
 
+
 """ MISC. SETTINGS  
 set shell=zsh
 set incsearch
@@ -20,8 +21,8 @@ set dir=~/.vim/swap
 set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 set undofile " This makes sure you actually create undofile
-
 set spelllang=en
+
 syntax enable
 
 let mapleader=','
@@ -71,6 +72,10 @@ nnoremap <leader>e :e ~/.vim/custom_rc<CR>
 nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
+
+" Ignore ZZ and ZQ (dangerous commands)
+nnoremap ZZ zz 
+nnoremap ZQ zz
 
 " Replace the incorrect spelling with the first suggestion
 nnoremap <leader>z 1zs 
