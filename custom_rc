@@ -101,7 +101,7 @@ autocmd BufRead ~/.vim/custom_rc :set syntax=vim
 augroup python 
 	autocmd!
 	autocmd Filetype python syn keyword pythonBuiltin self
-    autocmd Filetype python nnoremap th oimport pdb; pdb.set_trace()<ESC>
+    autocmd Filetype python nnoremap th oimport ipdb; ipdb.set_trace()<ESC>
 augroup end
 
 """ ABBREVIATIONS
