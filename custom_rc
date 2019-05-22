@@ -102,6 +102,8 @@ augroup python
 	autocmd!
 	autocmd Filetype python syn keyword pythonBuiltin self
     autocmd Filetype python nnoremap th oimport ipdb; ipdb.set_trace()<ESC>
+    autocmd Filetype python set foldmethod=indent
+    autocmd Filetype python set foldlevel=20
 augroup end
 
 """ ABBREVIATIONS
