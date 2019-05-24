@@ -7,6 +7,7 @@ set autoindent
 set shiftwidth=4
 set expandtab
 
+
 """ MISC. SETTINGS  
 set shell=zsh
 set incsearch
@@ -20,8 +21,8 @@ set dir=~/.vim/swap
 set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 set undofile " This makes sure you actually create undofile
-
 set spelllang=en
+
 syntax enable
 
 let mapleader=','
@@ -55,6 +56,9 @@ command TODO Ack TODO
 """ PLUGIN SETTINGS
 let g:NERDTreeWinPos = "right"
 
+" ctrlp plugin won't search for a top directory (with .git), it will just search the cwd
+let g:ctrlp_working_path_mode = 'a'
+
 """ REMAPPINGS
 
 nnoremap <C-h> <C-W>h
@@ -68,6 +72,10 @@ nnoremap <leader>e :e ~/.vim/custom_rc<CR>
 nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
+
+" Ignore ZZ and ZQ (dangerous commands)
+nnoremap ZZ zz 
+nnoremap ZQ zz
 
 " Replace the incorrect spelling with the first suggestion
 nnoremap <leader>z 1zs 
@@ -94,7 +102,9 @@ autocmd ColorScheme * hi Normal guibg=NONE ctermbg=NONE
 augroup python 
 	autocmd!
 	autocmd Filetype python syn keyword pythonBuiltin self
-    autocmd Filetype python nnoremap th oimport pdb; pdb.set_trace()<ESC>
+    autocmd Filetype python nnoremap th oimport ipdb; ipdb.set_trace()<ESC>
+    autocmd Filetype python set foldmethod=indent
+    autocmd Filetype python set foldlevel=20
 augroup end
 
 """ ABBREVIATIONS
