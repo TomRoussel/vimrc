@@ -52,6 +52,9 @@ command Gc Gcommit
 command Todo Ack TODO
 command TODO Ack TODO
 
+" pandoc dependant commands
+command! -range MD <line1>,<line2>!pandoc -f markdown -t latex
+
 
 """ PLUGIN SETTINGS
 let g:NERDTreeWinPos = "right"
