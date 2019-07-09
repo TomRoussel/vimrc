@@ -88,9 +88,9 @@ vnoremap $4 <ESC>`<i"<ESC>`>la"<ESC>
 " Remap Y to copy selection to main clipboard
 vnoremap Y "+y
 
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {}<ESC>i
+" inoremap ( ()<ESC>i
+" inoremap [ []<ESC>i
+" inoremap { {}<ESC>i
 
 """ SIMPLE AUTOCOMMANDS
 autocmd BufWritePost .vimrc nested source %
