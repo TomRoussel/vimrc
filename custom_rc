@@ -106,6 +106,12 @@ augroup python
     autocmd Filetype python set foldlevel=20
 augroup end
 
+augroup cpp
+    autocmd!
+    autocmd Filetype cpp set foldmethod=syntax
+    autocmd Filetype cpp set foldlevel=20
+augroup end
+
 """ ABBREVIATIONS
 abbr teh the
 abbr wrt w.r.t.
