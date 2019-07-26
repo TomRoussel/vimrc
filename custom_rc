@@ -68,6 +68,7 @@ nnoremap <C-l> <C-W>l
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>e :e ~/.vim/custom_rc<CR>
+nnoremap <leader>m :make<CR>
 
 nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
@@ -79,6 +80,10 @@ nnoremap ZQ zz
 
 " Replace the incorrect spelling with the first suggestion
 nnoremap <leader>z 1zs 
+
+" Shortcut to go to the next tab
+nnoremap <c-g> gt
+tnoremap <c-g> <c-w>gt
 
 vnoremap $1 <ESC>`<i(<ESC>`>la)<ESC>
 vnoremap $2 <ESC>`<i{<ESC>`>la}<ESC>
@@ -110,6 +115,7 @@ augroup cpp
     autocmd!
     autocmd Filetype cpp set foldmethod=syntax
     autocmd Filetype cpp set foldlevel=20
+    autocmd Filetype cpp inoreabbr <buffer> forr for(int idx=0; idx < <ESC>mai; idx++)<ESC>`ai
 augroup end
 
 """ ABBREVIATIONS
