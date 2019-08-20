@@ -19,3 +19,6 @@
 [submodule "pack/my-plugins/start/delimitMate"]
 	path = pack/my-plugins/start/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "pack/my-plugins/opt/vim-dispatch"]
+	path = pack/my-plugins/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
