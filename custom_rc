@@ -81,6 +81,10 @@ nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
 nnoremap ZZ zz 
 nnoremap ZQ zz
 
+" Don't open help when pressing F1
+nnoremap <F1> <NOP>
+inoremap <F1> <ESC>
+
 " Replace the incorrect spelling with the first suggestion
 nnoremap <leader>z 1zs 
 
