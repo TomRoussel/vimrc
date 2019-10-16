@@ -80,7 +80,7 @@ nnoremap <C-l> <C-W>l
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>e :e ~/.vim/custom_rc<CR>
-nnoremap <leader>m :make<CR>
+nnoremap <leader>m :Make<CR>
 
 nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
