@@ -86,6 +86,8 @@ nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
 
+nnoremap <C-n> :nohl<CR>
+
 " Don't open help when pressing F1
 nnoremap <F1> <NOP>
 inoremap <F1> <ESC>
