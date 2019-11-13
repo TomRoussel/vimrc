@@ -22,3 +22,6 @@
 [submodule "pack/my-plugins/opt/vim-dispatch"]
 	path = pack/my-plugins/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "pack/my-plugins/opt/vimpyter"]
+	path = pack/my-plugins/opt/vimpyter
+	url = https://github.com/szymonmaszke/vimpyter.git
