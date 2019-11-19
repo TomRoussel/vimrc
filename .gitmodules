@@ -25,3 +25,6 @@
 [submodule "pack/my-plugins/opt/vimpyter"]
 	path = pack/my-plugins/opt/vimpyter
 	url = https://github.com/szymonmaszke/vimpyter.git
+[submodule "pack/my-plugins/start/gruvbox"]
+	path = pack/my-plugins/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git

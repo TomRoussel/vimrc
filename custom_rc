@@ -29,8 +29,9 @@ let mapleader=','
 
 """ VISUAL STUFF
 
-colorscheme meta5
-hi Normal guibg=NONE ctermbg=NONE
+colorscheme gruvbox
+set background=dark
+" hi Normal guibg=NONE ctermbg=NONE
 
 set fillchars=vert:│
 
@@ -87,6 +88,8 @@ nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
 
 nnoremap <C-n> :nohl<CR>
+" This overrides a tag mapping (I never use tags anyways)
+nnoremap <C-t> :tabnew<CR>
 
 " Don't open help when pressing F1
 nnoremap <F1> <NOP>
