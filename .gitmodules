@@ -28,3 +28,6 @@
 [submodule "pack/my-plugins/start/gruvbox"]
 	path = pack/my-plugins/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "pack/my-plugins/start/vim-pandoc-syntax"]
+	path = pack/my-plugins/start/vim-pandoc-syntax
+	url = git@github.com:vim-pandoc/vim-pandoc-syntax.git

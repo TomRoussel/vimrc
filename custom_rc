@@ -136,6 +136,10 @@ augroup cpp
     autocmd Filetype cpp inoreabbr <buffer> forr for(int idx=0; idx < <ESC>mai; idx++)<ESC>`ai
 augroup end
 
+augroup pandoc
+    autocmd! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup end
+
 """ ABBREVIATIONS
 abbr teh the
 abbr wrt w.r.t.
