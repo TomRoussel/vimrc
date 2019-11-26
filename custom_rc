@@ -86,6 +86,7 @@ nnoremap <leader>m :Make<CR>
 nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
+nnoremap <c-l> :CtrlPTag<CR>
 
 nnoremap <C-n> :nohl<CR>
 " This overrides a tag mapping (I never use tags anyways)
