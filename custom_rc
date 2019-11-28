@@ -121,7 +121,7 @@ vnoremap Y "+y
 autocmd BufWritePost .vimrc nested source %
 autocmd BufWritePost ~/.vim/custom_rc nested source %
 autocmd BufRead ~/.vim/custom_rc :set syntax=vim
-autocmd ColorScheme * hi Normal guibg=NONE ctermbg=NONE
+" autocmd ColorScheme * hi Normal guibg=NONE ctermbg=NONE
 
 """ AUTOGROUP FOR FILETYPES
 augroup python 
