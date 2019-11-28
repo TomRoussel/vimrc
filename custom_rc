@@ -15,6 +15,7 @@ set hlsearch
 set laststatus=2
 set nocompatible
 set smartcase
+set smarttab
 set ignorecase " This needs to be set for smartcase to have any effect
 set backspace=indent,eol,start " Otherwise backspace acts weirdly
 set dir=~/.vim/swap
@@ -22,6 +23,7 @@ set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 set undofile " This makes sure you actually create undofile
 set spelllang=en
+set wildmenu
 
 syntax enable
 
