@@ -46,6 +46,7 @@ let g:lightline = {
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 command SaveSession mksession! ~/.vim_default_session
+command ClearSpaces %s/^ \{1,\}$//
 
 " Vim - fugitive commands
 command Gs Gstatus
@@ -64,6 +65,9 @@ let g:NERDTreeWinPos = "right"
 
 " ctrlp plugin won't search for a top directory (with .git), it will just search the cwd
 let g:ctrlp_working_path_mode = 'a'
+
+" python-syntax options, setting all highlight options on
+let python_highlight_all = 1
 
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)

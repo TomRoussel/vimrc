@@ -31,3 +31,6 @@
 [submodule "pack/my-plugins/start/vim-pandoc-syntax"]
 	path = pack/my-plugins/start/vim-pandoc-syntax
 	url = git@github.com:vim-pandoc/vim-pandoc-syntax.git
+[submodule "pack/my-plugins/start/python-syntax"]
+	path = pack/my-plugins/start/python-syntax
+	url = git@github.com:vim-python/python-syntax.git
