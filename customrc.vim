@@ -25,6 +25,8 @@ set undofile " This makes sure you actually create undofile
 set spelllang=en
 set wildmenu
 
+filetype plugin on
+
 syntax enable
 
 let mapleader=','
