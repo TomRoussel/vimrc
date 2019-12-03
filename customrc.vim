@@ -86,7 +86,7 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
 nnoremap <leader>w :w<CR>
-nnoremap <leader>e :e ~/.vim/custom_rc<CR>
+nnoremap <leader>e :e ~/.vim/customrc.vim<CR>
 nnoremap <leader>m :Make<CR>
 
 nnoremap <C-f> :CtrlP<CR>
@@ -123,8 +123,8 @@ vnoremap Y "+y
 
 """ SIMPLE AUTOCOMMANDS
 autocmd BufWritePost .vimrc nested source %
-autocmd BufWritePost ~/.vim/custom_rc nested source %
-autocmd BufRead ~/.vim/custom_rc :set syntax=vim
+autocmd BufWritePost ~/.vim/customrc.vim nested source %
+autocmd BufRead ~/.vim/customrc.vim :set syntax=vim
 " autocmd ColorScheme * hi Normal guibg=NONE ctermbg=NONE
 
 """ AUTOGROUP FOR FILETYPES
@@ -150,3 +150,8 @@ augroup end
 """ ABBREVIATIONS
 abbr teh the
 abbr wrt w.r.t.
+
+let s:localrc = expand("%:p:h") . "/localrc.vim"
+if filereadable(s:localrc)
+    execute 'source' s:localrc
+endif

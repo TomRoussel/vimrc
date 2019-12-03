@@ -3,3 +3,4 @@ undo/
 backup/
 .netrwhist
 spell/
+localrc.vim
