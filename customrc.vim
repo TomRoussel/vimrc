@@ -153,7 +153,7 @@ augroup end
 abbr teh the
 abbr wrt w.r.t.
 
-let s:localrc = expand("%:p:h") . "/localrc.vim"
+let s:localrc = expand("<sfile>:p:h") . "/localrc.vim"
 if filereadable(s:localrc)
     execute 'source' s:localrc
 endif
