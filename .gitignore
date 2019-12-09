@@ -4,3 +4,4 @@ backup/
 .netrwhist
 spell/
 localrc.vim
+plugged/

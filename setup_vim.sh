@@ -10,7 +10,6 @@ function check_bin() {
 
 if [[ ! -d ~/.vim ]]; then
 	echo "Could not find ~/.vim, did you forget to rename the repo after cloning it?"
-	echo "Quitting"
 	exit 1
 fi
 
@@ -26,8 +25,6 @@ fi
 echo "source ~/.vim/custom_rc" >> ~/.vimrc
 
 cd ~/.vim
-
-git submodule update --init
 
 mkdir swap
 mkdir undo

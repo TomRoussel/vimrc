@@ -1,3 +1,8 @@
+let s:pluginrc = expand("<sfile>:p:h") . "/pluginrc.vim"
+if filereadable(s:pluginrc)
+    execute 'source' s:pluginrc
+endif
+
 """ OPTIONS
 
 """ INDENTATION OPTIONS
@@ -157,3 +162,5 @@ let s:localrc = expand("<sfile>:p:h") . "/localrc.vim"
 if filereadable(s:localrc)
     execute 'source' s:localrc
 endif
+
+
