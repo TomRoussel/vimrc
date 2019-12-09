@@ -30,3 +30,4 @@ mkdir swap
 mkdir undo
 mkdir backup
 
+vim +PlugInstall +qall
