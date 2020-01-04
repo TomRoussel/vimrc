@@ -12,4 +12,5 @@ Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
+Plug 'janko/vim-test'
 call plug#end()

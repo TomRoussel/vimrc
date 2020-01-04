@@ -76,6 +76,9 @@ let g:ctrlp_working_path_mode = 'a'
 " python-syntax options, setting all highlight options on
 let python_highlight_all = 1
 
+" vim-test
+let test#strategy = "vimterminal"
+
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
 nnoremap ZZ zz 
