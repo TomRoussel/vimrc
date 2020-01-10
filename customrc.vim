@@ -80,6 +80,7 @@ let python_highlight_all = 1
 let test#strategy = "vimterminal"
 nnoremap <F5> :TestSuite<CR>
 nnoremap <F6> :TestLast<CR>
+nnoremap <F7> :TestFile<CR>
 
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
