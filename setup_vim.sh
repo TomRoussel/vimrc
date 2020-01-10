@@ -22,7 +22,7 @@ if [[ -f ~/.vimrc ]]; then
 	exit 1
 fi
 
-echo "source ~/.vim/custom_rc" >> ~/.vimrc
+echo "source ~/.vim/customrc.vim" >> ~/.vimrc
 
 cd ~/.vim
 
