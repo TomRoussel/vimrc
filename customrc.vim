@@ -29,6 +29,9 @@ set undodir=~/.vim/undo
 set undofile " This makes sure you actually create undofile
 set spelllang=en
 set wildmenu
+set scrolloff=3
+
+let g:dispatch_no_maps = 1
 
 filetype plugin on
 
