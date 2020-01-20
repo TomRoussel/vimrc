@@ -13,4 +13,5 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
 Plug 'janko/vim-test'
+Plug 'kshenoy/vim-signature'
 call plug#end()
