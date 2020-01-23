@@ -57,6 +57,7 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 command SaveSession mksession! ~/.vim_default_session
 command ClearSpaces %s/^ \{1,\}$//
+command ThisDir lcd %:p:h
 
 " Vim - fugitive commands
 command Gs Gstatus
