@@ -15,4 +15,5 @@ Plug 'vimwiki/vimwiki'
 Plug 'janko/vim-test'
 Plug 'kshenoy/vim-signature'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'junegunn/goyo.vim'
 call plug#end()
