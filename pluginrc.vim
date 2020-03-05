@@ -7,7 +7,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'szymonmaszke/vimpyter', { 'for': 'ipynb'}
+" Plug 'szymonmaszke/vimpyter', { 'for': 'ipynb'}
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
