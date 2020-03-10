@@ -1,4 +1,4 @@
-let s:pluginrc = expand("<sfile>:p:h") . "/pluginrc.vim"
+let s:pluginrc = expand("<sfile>:p:h") . "/" .  "pluginrc.vim"
 if filereadable(s:pluginrc)
     execute 'source' s:pluginrc
 endif
