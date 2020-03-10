@@ -48,7 +48,7 @@ set background=dark
 set fillchars=vert:│
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'wombat',
       \ }
 
 
