@@ -58,6 +58,8 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 command SaveSession mksession! ~/.vim_default_session
 command ClearSpaces %s/^ \{1,\}$//
 command ThisDir lcd %:p:h
+command Dutch set spell | set spelllang=nl
+command English set spell | set spelllang=en
 
 " Vim - fugitive commands
 command Gs Gstatus
