@@ -60,6 +60,19 @@ command ClearSpaces %s/^ \{1,\}$//
 command ThisDir lcd %:p:h
 command Dutch set spell | set spelllang=nl
 command English set spell | set spelllang=en
+" command -range DebugPrint <line1>,<line2>s/print/logging.debug
+command -range DebugPrint <line1>,<line2>call DebugPrintF()
+
+function DebugPrintF() range
+    execute a:firstline . "," a:lastline . "s/print/logging.debug"
+
+    let search_result = search("import logging", "wn")
+    if !search_result
+        echohl Warningmsg
+        echom "Warning: not importing logging"
+        echohl none
+    endif
+endfunction
 
 " Vim - fugitive commands
 command Gs Gstatus
