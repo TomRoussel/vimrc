@@ -154,9 +154,12 @@ vnoremap Y "+y
 " inoremap { {}<ESC>i
 
 """ SIMPLE AUTOCOMMANDS
-autocmd BufWritePost .vimrc nested source %
-autocmd BufWritePost ~/.vim/customrc.vim nested source %
-autocmd BufRead ~/.vim/customrc.vim :set syntax=vim
+augroup vimfiles
+    autocmd!
+    autocmd BufWritePost .vimrc nested source %
+    autocmd BufWritePost ~/.vim/customrc.vim nested source %
+    autocmd BufRead ~/.vim/customrc.vim :set syntax=vim
+augroup end
 " autocmd ColorScheme * hi Normal guibg=NONE ctermbg=NONE
 
 """ AUTOGROUP FOR FILETYPES
