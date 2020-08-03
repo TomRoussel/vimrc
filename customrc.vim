@@ -74,6 +74,9 @@ function DebugPrintF() range
     endif
 endfunction
 
+" Zotero outputs bibtex on a single line, this command makes it prettier
+command BibtexMultiline silent s/}$/\r}/ | silent -1 | silent s/, \(\w\+=\)/,\r  \1/g
+
 " Vim - fugitive commands
 command Gs Gstatus
 command Gc Gcommit
