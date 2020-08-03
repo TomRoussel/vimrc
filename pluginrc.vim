@@ -17,4 +17,5 @@ Plug 'janko/vim-test'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'junegunn/goyo.vim'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'dense-analysis/ale'
 call plug#end()

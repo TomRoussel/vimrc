@@ -101,6 +101,14 @@ nnoremap <F5> :TestSuite<CR>
 nnoremap <F6> :TestLast<CR>
 nnoremap <F7> :TestFile<CR>
 
+let g:ale_linters = {
+\   "python": ['flake8']
+\}
+
+let g:ale_fixers = {
+\   "python": ["black"]
+\}
+
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
 nnoremap ZZ zz 
