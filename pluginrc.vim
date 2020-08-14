@@ -20,4 +20,5 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'junegunn/goyo.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'dense-analysis/ale'
+Plug 'easymotion/vim-easymotion'
 call plug#end()

@@ -112,6 +112,12 @@ let g:ale_fixers = {
 \   "python": ["black"]
 \}
 
+let g:EasyMotion_smartcase = 1
+
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+nmap <leader>f <Plug>(easymotion-overwin-f)
+
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
 nnoremap ZZ zz 
