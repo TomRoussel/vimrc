@@ -11,6 +11,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'janko/vim-test'
 " Plug 'kshenoy/vim-signature'
