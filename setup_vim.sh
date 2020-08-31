@@ -16,6 +16,8 @@ fi
 echo "Checking some dependencies..."
 check_bin ack
 check_bin git
+check_bin fzf
+check_bin ag
 
 if [[ -f ~/.vimrc ]]; then
 	echo "~/.vimrc already exists! Please remove this manually"
