@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-python/python-syntax'
 Plug 'Raimondi/delimitMate'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
@@ -21,4 +21,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'dense-analysis/ale'
 Plug 'easymotion/vim-easymotion'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()

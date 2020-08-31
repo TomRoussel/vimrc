@@ -89,6 +89,7 @@ command TODO Ack TODO
 command! -range MD <line1>,<line2>!pandoc -f markdown -t latex
 
 
+
 """ PLUGIN SETTINGS
 let g:NERDTreeWinPos = "right"
 
@@ -118,6 +119,11 @@ map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 nmap <leader>f <Plug>(easymotion-overwin-f)
 
+
+" fzf commands
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'bat --color=always {}']}, <bang>0)
+
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
 nnoremap ZZ zz 
@@ -138,10 +144,15 @@ nnoremap <leader>s :w<CR>
 nnoremap <leader>e :e ~/.vim/customrc.vim<CR>
 nnoremap <leader>m :Make<CR>
 
-nnoremap <C-f> :CtrlP<CR>
+" nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
-nnoremap <leader>p :CtrlPTag<CR>
+" nnoremap <leader>p :CtrlPTag<CR>
+
+nnoremap <C-p> :Files<CR>
+
+" Goyo shortcut
+nnoremap <leader>g :Goyo<CR>
 
 nnoremap <C-n> :nohl<CR>
 " This overrides a tag mapping (I never use tags anyways)
@@ -193,6 +204,11 @@ augroup cpp
     autocmd Filetype cpp set foldmethod=syntax
     autocmd Filetype cpp set foldlevel=20
     autocmd Filetype cpp inoreabbr <buffer> forr for(int idx=0; idx < <ESC>mai; idx++)<ESC>`ai
+augroup end
+
+augroup tex
+    autocmd!
+    autocmd Filetype tex set linebreak
 augroup end
 
 augroup pandoc
