@@ -122,7 +122,7 @@ nmap <leader>f <Plug>(easymotion-overwin-f)
 
 " fzf commands
 command! -bang -nargs=? -complete=dir Files
-    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'bat --color=always {}']}, <bang>0)
+    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'bat --color=always {}', '--height=30%']}, <bang>0)
 
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
@@ -143,6 +143,7 @@ nnoremap <C-l> <C-W>l
 nnoremap <leader>s :w<CR>
 nnoremap <leader>e :e ~/.vim/customrc.vim<CR>
 nnoremap <leader>m :Make<CR>
+nnoremap <leader><leader>m :w<CR>:Make!<CR>
 
 " nnoremap <C-f> :CtrlP<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
@@ -169,10 +170,10 @@ nnoremap <leader>z 1zs
 nnoremap <c-g> gt
 tnoremap <c-g> <c-w>gt
 
-vnoremap $1 <ESC>`<i(<ESC>`>la)<ESC>
-vnoremap $2 <ESC>`<i{<ESC>`>la}<ESC>
-vnoremap $3 <ESC>`<i[<ESC>`>la]<ESC>
-vnoremap $4 <ESC>`<i"<ESC>`>la"<ESC>
+" vnoremap $1 <ESC>`<i(<ESC>`>la)<ESC>
+" vnoremap $2 <ESC>`<i{<ESC>`>la}<ESC>
+" vnoremap $3 <ESC>`<i[<ESC>`>la]<ESC>
+" vnoremap $4 <ESC>`<i"<ESC>`>la"<ESC>
 
 " Remap Y to copy selection to main clipboard
 vnoremap Y "+y
@@ -209,6 +210,7 @@ augroup end
 augroup tex
     autocmd!
     autocmd Filetype tex set linebreak
+    autocmd Filetype tex set spell | set spelllang=en
 augroup end
 
 augroup pandoc
