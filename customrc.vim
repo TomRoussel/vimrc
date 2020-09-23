@@ -150,7 +150,9 @@ nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
 " nnoremap <leader>p :CtrlPTag<CR>
 
+" remappings for fzf
 nnoremap <C-p> :Files<CR>
+nnoremap <C-l> :Lines<CR>
 
 " Goyo shortcut
 nnoremap <leader>g :Goyo<CR>
