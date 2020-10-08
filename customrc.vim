@@ -180,6 +180,8 @@ tnoremap <c-g> <c-w>gt
 
 " Remap Y to copy selection to main clipboard
 vnoremap Y "+y
+" Search for the highlighted text
+vnoremap <C-_> y/<C-R>"<CR> 
 
 " inoremap ( ()<ESC>i
 " inoremap [ []<ESC>i
