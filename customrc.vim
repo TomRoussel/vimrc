@@ -152,7 +152,8 @@ nnoremap <F4> <C-w>h:q<CR>:diffoff<CR>
 
 " remappings for fzf
 nnoremap <C-p> :Files<CR>
-nnoremap <C-l> :Lines<CR>
+" <C-_> maps to <C-/>
+nnoremap <C-_> :Lines<CR> 
 
 " Goyo shortcut
 nnoremap <leader>g :Goyo<CR>
@@ -179,6 +180,8 @@ tnoremap <c-g> <c-w>gt
 
 " Remap Y to copy selection to main clipboard
 vnoremap Y "+y
+" Search for the highlighted text
+vnoremap <C-_> y/<C-R>"<CR> 
 
 " inoremap ( ()<ESC>i
 " inoremap [ []<ESC>i
