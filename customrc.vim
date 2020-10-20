@@ -32,6 +32,7 @@ set wildmenu
 set scrolloff=3
 
 let g:dispatch_no_maps = 1
+let g:tex_flavor = "latex"
 
 filetype plugin on
 
