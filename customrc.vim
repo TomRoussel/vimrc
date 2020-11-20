@@ -30,6 +30,7 @@ set undofile " This makes sure you actually create undofile
 set spelllang=en
 set wildmenu
 set scrolloff=3
+set mouse=a
 
 let g:dispatch_no_maps = 1
 let g:tex_flavor = "latex"
