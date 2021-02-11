@@ -25,4 +25,5 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'fatih/vim-go'
 call plug#end()
