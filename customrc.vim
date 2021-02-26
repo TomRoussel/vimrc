@@ -31,6 +31,7 @@ set spelllang=en
 set wildmenu
 set scrolloff=3
 set mouse=a
+set foldlevelstart=20
 
 let g:dispatch_no_maps = 1
 let g:tex_flavor = "latex"
@@ -125,6 +126,10 @@ nmap <leader>f <Plug>(easymotion-overwin-f)
 " fzf commands
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'bat --color=always {}', '--height=30%']}, <bang>0)
+
+
+" Vimwiki settings
+let g:vimwiki_folding="expr"
 
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
