@@ -90,6 +90,7 @@ command TODO Ack TODO
 
 " pandoc dependant commands
 command! -range MD <line1>,<line2>!pandoc -f markdown -t latex
+command Today read !date +\%Y-\%m-\%d
 
 
 
@@ -227,6 +228,10 @@ augroup end
 
 augroup pandoc
     autocmd! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup end
+
+augroup vimwiki
+    autocmd Filetype vimwiki setlocal linebreak
 augroup end
 
 """ ABBREVIATIONS
