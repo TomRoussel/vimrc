@@ -231,7 +231,8 @@ augroup pandoc
 augroup end
 
 augroup vimwiki
-    autocmd Filetype vimwiki setlocal linebreak
+    autocmd!
+    autocmd BufRead *.wiki setlocal linebreak
 augroup end
 
 """ ABBREVIATIONS
