@@ -239,7 +239,12 @@ augroup end
 abbr teh the
 abbr wrt w.r.t.
 
-let s:localrc = expand("<sfile>:p:h") . "/localrc.vim"
+let s:shorthand = expand("<sfile>:p:h") . "/" . "shorthand.vim"
+command SH execute 'source' s:shorthand
+
+execute "nnoremap <leader>h :vs" s:shorthand "<CR>"
+
+let s:localrc = expand("<sfile>:p:h") . "/" . "localrc.vim"
 if filereadable(s:localrc)
     execute 'source' s:localrc
 endif
