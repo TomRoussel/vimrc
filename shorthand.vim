@@ -6,5 +6,14 @@ iabbr <buffer> d data
 iabbr <buffer> ann annotate
 iabbr <buffer> sys system
 iabbr <buffer> t the
-
-
+iabbr <buffer> nw network
+iabbr <buffer> tr train
+iabbr <buffer> diff different
+iabbr <buffer> det detector
+iabbr <buffer> occl occlusions
+iabbr <buffer> clsi classifier
+iabbr <buffer> expl explicit
+iabbr <buffer> y you
+iabbr <buffer> rec receive
+iabbr <buffer> seg segmentatie
+iabbr <buffer> dist distance

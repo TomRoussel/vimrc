@@ -244,6 +244,23 @@ command SH execute 'source' s:shorthand
 
 execute "nnoremap <leader>h :vs" s:shorthand "<CR>"
 
+function Showsh()
+    vnew
+    vertical resize 40
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    setlocal noswapfile
+
+    execute 'read' s:shorthand
+    0delete
+    silent %s/iabbr <buffer> //
+    silent %s/ / - /
+    wincmd p
+
+endfunction
+
+command ShowSH call Showsh()
+
 let s:localrc = expand("<sfile>:p:h") . "/" . "localrc.vim"
 if filereadable(s:localrc)
     execute 'source' s:localrc
