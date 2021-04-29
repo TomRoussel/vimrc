@@ -15,5 +15,7 @@ iabbr <buffer> clsi classifier
 iabbr <buffer> expl explicit
 iabbr <buffer> y you
 iabbr <buffer> rec receive
-iabbr <buffer> seg segmentatie
+iabbr <buffer> seg segmentation
 iabbr <buffer> dist distance
+iabbr <buffer> w with
+iabbr <buffer> cur current

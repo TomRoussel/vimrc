@@ -246,15 +246,27 @@ execute "nnoremap <leader>h :vs" s:shorthand "<CR>"
 
 function Showsh()
     vnew
-    vertical resize 40
+    " vertical resize 40
     setlocal buftype=nofile
     setlocal bufhidden=hide
     setlocal noswapfile
+    setlocal nobuflisted
 
     execute 'read' s:shorthand
     0delete
     silent %s/iabbr <buffer> //
     silent %s/ / - /
+
+    " Resize buffer
+    silent %yank g
+    silent %!wc -L
+    silent delete h
+    silent put g
+    execute "vertical resize" @h
+
+    0d
+
+    setlocal nomodifiable
     wincmd p
 
 endfunction
