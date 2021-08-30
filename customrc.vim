@@ -77,6 +77,8 @@ function DebugPrintF() range
     endif
 endfunction
 
+command OpenFile Dispatch! xdg-open %
+
 " Zotero outputs bibtex on a single line, this command makes it prettier
 command BibtexMultiline silent s/}$/\r}/ | silent -1 | silent s/, \(\w\+=\)/,\r  \1/g
 
@@ -131,6 +133,12 @@ command! -bang -nargs=? -complete=dir Files
 
 " Vimwiki settings
 let g:vimwiki_folding="expr"
+let g:vimwiki_table_mappings=0
+let g:vimwiki_table_auto_fmt=0
+
+" Snipmate settings
+let g:snipMate = { 'snippet_version' : 1}
+imap <C-J> <PLUG>snipMateNextOrTrigger
 
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
@@ -190,6 +198,8 @@ tnoremap <c-g> <c-w>gt
 vnoremap Y "+y
 " Search for the highlighted text
 vnoremap <C-_> y/<C-R>"<CR> 
+
+nnoremap <leader>o :OpenFile<CR>
 
 " inoremap ( ()<ESC>i
 " inoremap [ []<ESC>i
@@ -257,7 +267,7 @@ function Showsh()
     silent %s/iabbr <buffer> //
     silent %s/ / - /
 
-    " Resize buffer
+    " Resize buffer to the max linelength
     silent %yank g
     silent %!wc -L
     silent delete h
@@ -268,7 +278,6 @@ function Showsh()
 
     setlocal nomodifiable
     wincmd p
-
 endfunction
 
 command ShowSH call Showsh()

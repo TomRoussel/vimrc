@@ -19,3 +19,5 @@ iabbr <buffer> seg segmentation
 iabbr <buffer> dist distance
 iabbr <buffer> w with
 iabbr <buffer> cur current
+iabbr <buffer> xl spreadsheet
+
