@@ -83,8 +83,8 @@ command OpenFile Dispatch! xdg-open %
 command BibtexMultiline silent s/}$/\r}/ | silent -1 | silent s/, \(\w\+=\)/,\r  \1/g
 
 " Vim - fugitive commands
-command Gs Gstatus
-command Gc Gcommit
+command Gs Git
+command Gc Git commit
 
 " Ack dependant commands
 command Todo Ack TODO
