@@ -106,10 +106,23 @@ let g:ctrlp_working_path_mode = 'a'
 let python_highlight_all = 1
 
 " vim-test
-let test#strategy = "vimterminal"
-nnoremap <F5> :TestSuite<CR>
-nnoremap <F6> :TestLast<CR>
-nnoremap <F7> :TestFile<CR>
+" let test#strategy = "vimterminal"
+nnoremap <F5> :call RunTests("TestSuite")<CR>
+nnoremap <F6> :call RunTests("TestLast")<CR>
+nnoremap <F7> :call RunTests("TestFile")<CR>
+
+let g:shtuff_receiver = 'devrunner'
+let test#strategy = "shtuff"
+
+function RunTests(cmd)
+    silent call system("shtuff has devrunner") 
+    if v:shell_error != 0
+        terminal shtuff as devrunner
+    else
+        execute a:cmd
+    endif
+endfunction
+" command StartTestRunner terminal shtuff as devrunner
 
 let g:ale_linters = {
 \   "python": ['flake8']
