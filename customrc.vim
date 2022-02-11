@@ -59,12 +59,20 @@ let g:lightline = {
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 command SaveSession mksession! ~/.vim_default_session
-command ClearSpaces %s/^ \{1,\}$//
+command ClearSpaces %s/^\s\{1,\}$//
 command ThisDir lcd %:p:h
 command Dutch set spell | set spelllang=nl
 command English set spell | set spelllang=en
 " command -range DebugPrint <line1>,<line2>s/print/logging.debug
 command -range DebugPrint <line1>,<line2>call DebugPrintF()
+command ReadPickle call ReadPickle()
+
+function ReadPickle()
+    %!python3 -m pickle %
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    setlocal noswapfile
+endfunction
 
 function DebugPrintF() range
     execute a:firstline . "," a:lastline . "s/print/logging.debug"
