@@ -111,7 +111,9 @@ let g:NERDTreeWinPos = "right"
 let g:ctrlp_working_path_mode = 'a'
 
 " python-syntax options, setting all highlight options on
-let python_highlight_all = 1
+let g:python_highlight_space_errors = 0
+let g:python_highlight_all = 1
+
 
 " vim-test
 " let test#strategy = "vimterminal"
