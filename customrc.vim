@@ -163,6 +163,10 @@ let g:vimwiki_table_auto_fmt=0
 let g:snipMate = { 'snippet_version' : 1}
 imap <C-J> <PLUG>snipMateNextOrTrigger
 
+" YouCompleteMe YCM
+
+nnoremap <C-F> :YcmCompleter GoTo<CR>
+
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
 nnoremap ZZ zz 
@@ -195,7 +199,7 @@ nnoremap <C-p> :Files<CR>
 nnoremap <C-_> :Lines<CR> 
 
 " Goyo shortcut
-nnoremap <leader>g :Goyo<CR>
+" nnoremap <leader>gg :Goyo<CR>
 
 nnoremap <C-n> :nohl<CR>
 " This overrides a tag mapping (I never use tags anyways)
