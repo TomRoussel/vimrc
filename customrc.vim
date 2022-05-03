@@ -166,6 +166,7 @@ imap <C-J> <PLUG>snipMateNextOrTrigger
 " YouCompleteMe YCM
 
 nnoremap <C-F> :YcmCompleter GoTo<CR>
+nnoremap <leader>u :YcmCompleter GoToReferences<CR>
 
 """ UNMAPPING SOME STUFF
 " Ignore ZZ and ZQ (dangerous commands)
