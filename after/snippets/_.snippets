@@ -21,3 +21,16 @@ snippet argparse
 
 	parser.add_argument("--${1}", type=${2})
 	args = parser.parse_args()
+
+
+snippet measure_time
+	def measure_time(func):
+		def wrapped(*args, **kwargs):
+			t1 = time.time()
+			retvals = func(*args, **kwargs)
+			t2 = time.time()
+
+			print(f"Time spent: {t2-t1}")
+			return retvals
+
+		return wrapped
